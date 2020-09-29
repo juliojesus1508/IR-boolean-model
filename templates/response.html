@@ -1,0 +1,28 @@
+{% extends 'request.html' %}
+
+{% block content %}
+<table>
+    <thead>
+    <tbody>
+        <tr>
+            <th>Titulo</th>
+            <th>Autor(es)</th>
+            <th>archivo</th>
+            <th>Index</th>
+        </tr>
+    </thead>
+    <tbody>
+    {%for element in result%}
+        <tr>
+            <td>{{ element['title']}}</td>
+            <td>{{ element['author']}} </td>
+            <td>{{ element['file']}}</td>
+            <td>{{ element['doc_id']}}</td>
+        </tr>
+    {%endfor%} 
+    </tbody>
+</table>            
+{% endblock %}
+
+
+
